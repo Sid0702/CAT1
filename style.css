@@ -1,0 +1,156 @@
+html,
+body,
+h1,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-width: 1400px;
+  min-height: 100vh;
+  color: #131313;
+  font-family: "Manrope", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+img {
+  transition: 0.3s ease-in-out;
+  opacity: 0.9;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px #ddd;
+  opacity: 1;
+}
+
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.header-logo img:hover {
+  box-shadow: none;
+}
+
+.header-nav {
+  display: grid;
+  grid-template-columns: 225px 1fr;
+  grid-column-gap: 50px;
+  align-items: center;
+  padding: 10px 0;
+  min-height: 90px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #ddd;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: end;
+  list-style: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.menu-item {
+  margin-right: 35px;
+}
+
+.menu-item:last-child {
+  margin-right: 0;
+}
+
+.menu-item a {
+  color: inherit;
+  position: relative;
+  text-decoration: none;
+}
+
+.menu-item a::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #aaa;
+  transition: 0.3s ease-in;
+}
+
+.menu-item a:hover::after {
+  width: 40px;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 50px;
+  margin-top: 55px;
+}
+
+.article-header {
+  grid-column: span 2;
+}
+
+.article-title {
+  margin-bottom: 25px;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.article-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  border-left: 2px solid #ddd;
+  padding-left: 20px;
+}
+
+.article-text {
+  grid-column: span 2;
+}
+
+.article-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.article-img-header {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.article-img-wide {
+  grid-column: span 2;
+}
+
+.article-img-full-size {
+  grid-column: 1 / -1;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 225px 1fr;
+  grid-column-gap: 50px;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 120px;
+  box-sizing: border-box;
+}
+
+.footer-copyright {
+  font-size: 16px;
+  line-height: 1.5;
+  justify-self: end;
+}
